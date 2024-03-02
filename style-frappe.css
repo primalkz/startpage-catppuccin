@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Font";
+  src: url("./Iosevka.ttf");
+}
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dcc6a0; /* Regular7 - Subtext 1 */
+  background: #303446; /* Base */
+  padding: 1em;
+  font-family: Font;
+  min-height: 100vh 
+}
+
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 130px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: absolute;
+  top: 0px; /* Adjust the positioning from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Set a higher z-index to bring the image on top of other elements */
+
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60em; /* Set a max-width to limit content width if needed */
+  position: relative; /* Make sure the content div is relatively positioned */
+  z-index: 1; /* Set a lower z-index for the content div */
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 0;
+  color: #8caaee; /* Regular4 - blue */
+}
+
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #a6d189; /* Regular2 - green */
+  grid-column: 1/-1;
+  text-align: left;
+  margin-bottom: 2.3em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 60em; /* Set a max-width to limit content width if needed */
+
+
+}
+
+.search-bar {
+  text-align: left;
+  margin-top: 1em; /* Adjust as needed */
+}
+
+form {
+  display: inline-block;
+}
+/*.linkss {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1em;
+}*/
+
+.linkss {
+  display: flex;
+}
+
+.category {
+  text-align: center;
+  margin: 1em;
+  padding: 1.2em;
+  background-color: #303446; /* Adjust background color as needed */
+  border-radius: 5px;
+
+  box-shadow: rgba(35, 38, 52, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #cca86b; /* Adjust color as needed */
+  margin-bottom: 0.5em;
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  list-style-type: none;
+}
+
+li {
+  line-height: 1.0em;
+  margin-left: 0; /* Adjust as needed */
+  padding: 3px;
+  color: #51576d; /* Regular0 - Surface 1 */
+}
+
+
+/*li {
+  line-height: 1.4em;
+  margin-left: 4.8em;
+  color: #51576d;
+}*/
+
+li:first-child {
+  display: inline-block;
+  color: #cca86b; /* Bright5 - pink */
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2em;
+  margin-left: 2.5em;
+}
+
+a {
+  color: #b66d61; /* Bright5 - pink */
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a6d189; /* Regular2 - green */
+  font-style: italic;
+}
+
+form {
+  padding: 2px;
+  margin: 2px;
+  position: relative;
+  width: 30rem;
+  background: var(--color-brand);
+  border-radius: 8px;
+  box-shadow: rgba(35, 38, 52, 0.35) 0px 5px 15px;
+
+}
+
+
+input, button {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  padding: 3px;
+}
+input[type="text"] {
+  outline: 0; 
+  width: 100%;
+  background: var(--color-light);
+  padding: 1 1.6rem;
+  border-radius: var(--rad);
+  appearance: none; 
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+
+button {
+  display: none; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: var(--color-brand);
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+  + button {
+    display: block;
+  }
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
